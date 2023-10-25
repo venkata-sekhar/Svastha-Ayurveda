@@ -1,0 +1,38 @@
+h4
+{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+}
+.main-header
+{
+    display: flex;
+    margin:auto;
+}
+.main-header img
+{
+    float: left;
+    margin-right: 20px;
+}
+.main-header p
+{
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-right: 20px;
+}
+p
+{
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600px;
+}
+ul li 
+{
+    font-size: 18px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+h3
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 1200px;
+}

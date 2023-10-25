@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        /* Custom style to center the form */
+        .center-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+           /* Increase form width */
+        #login-form, #register-form {
+            width: 80%; /* Adjust the width as needed */
+            max-width: 400px; /* Set a maximum width */
+        }
+         body {
+            background-image: url("form.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+         .text-center {
+            color:maroon; /* Change this to the desired color */
+            
+         }
+         /* Style for error messages */
+#merror,
+#perror,
+#m1error,
+#p1error,
+#p2error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+    </style>
+    <script>
+        $(document).ready(function () {
+         
+            // Toggle between login and register forms
+            $("#toggle-form").click(function () {
+                $("#login-form, #register-form").toggle();
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 center-form">
+                <!-- Login Form -->
+                <form id="login-form" action="login.php" defer method="post">
+                    <h1 class="text-center" >Login</h1>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="login-email" placeholder="Enter your email" autocomplete="off" name="login-email">
+                            
+                                <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                            
+                        </div>
+                    </div>
+                    <span id="merror"></span><br>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="login-password" placeholder="Enter your password" autocomplete="off" name="login-password">
+                        </div>
+                    </div>
+                    <span id="perror"></span><br>
+                    <!--<a href="home.html" style="text-decoration:none"><button type="submit" class="btn btn-danger btn-block text-dark">Login</button></a>-->
+                    <button type="submit" class="mt-2 btn btn-info btn-block text-dark" id="ram" style="text-decoration: none;"><b>Submit</b></button>
+                     <!-- <p class="text-center mt-3">
+                    <a href="#register-form" id="toggle-form" style="color:black;">Don't have an account? Register here.</a>
+                </p> -->
+                </form>
+<form id="register-form" style="display: none;" action="register.php" defer method="post">
+    <h1 class="text-center">Register</h1>
+    <div class="form-group">
+        <label for="register-email">Email</label>
+        <div class="input-group">
+            <input type="email" class="form-control" id="register-email" placeholder="Enter your email" autocomplete="off" name="register-email">
+            <div class="input-group-append">
+                <span class="input-group-text"><i class="far fa-envelope"></i></span>
+            </div>
+        </div>
+       
+    </div>
+    <span id="m1error"></span><br>
+    <div class="form-group">
+        <label for="register-password">Password</label>
+        <div class="input-group">
+            <input type="password" class="form-control" id="register-password" placeholder="Enter your password" autocomplete="off" name="register-password">
+            
+        </div>
+        
+    </div>
+    <span id="p1error"></span><br>
+    <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <div class="input-group">
+            <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" autocomplete="off" name="confirm-password">
+            
+        </div>
+        
+    </div>
+    <span id="p2error"></span><br>
+    <button type="submit" class="mt-2 btn btn-info btn-block text-dark" id="rrr" style="text-decoration: none;"><b>Register</b></button>
+</form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let form=document.getElementById('login-form');
+        let form1=document.getElementById('register-form');
+        let email = document.getElementById("login-email");
+        let pass = document.getElementById("login-password");
+        let merror = document.getElementById('merror');
+        let perror = document.getElementById('perror');
+
+// For register form
+        let email1 = document.getElementById("register-email");
+        let pass1 = document.getElementById("register-password");
+        let pass2 = document.getElementById("confirm-password");
+        let merror1 = document.getElementById('m1error');
+        let perror0 = document.getElementById('p1error');
+        let perror1 = document.getElementById('p2error');
+        form.addEventListener("submit",event=>{event.preventDefault();validate();})
+        function validate(){
+		let emai=email.value.trim();
+        let psd=pass.value.trim();
+        merror.innerText = "";
+        perror.innerText = "";
+		if(emai===""){
+                	merror.innerText="email can't be empty";
+                }
+        else if(!(emai.match(/^[a-zA-Z0-9_/.-]+@[a-zA-Z0-9_-]+(?:\.[a-z]{2,6})$/))){
+                	merror.innerText="invalid mail";
+		}
+        else if (psd === "") {
+        perror.innerText = "password should not be empty";
+    }
+        else if(!(psd.match(/[a-z]+[A-Z]+[0-9]+/) || (/[A-Z]+[a-z]+[0-9]/))){
+                	perror.innerText="must used aleast one capital,small,digit";
+           	}
+        else if(!psd.match(/[#_@$^%]/)){
+                	perror.innerText="contain atleast one special character";
+		}
+		else{
+                    
+       	        	form.submit();
+       	   	}
+	}
+    form1.addEventListener("submit",event=>{event.preventDefault();validate1();})
+        function validate1(){
+		let emai1=email1.value.trim();
+        let psd1=pass1.value.trim();
+        let psd2=pass2.value.trim();
+        merror1.innerText = "";
+        perror0.innerText = "";
+        perror1.innerText = "";
+		if(emai1===""){
+                	merror1.innerText="email can't be empty";
+                }
+        else if (!(emai1.match(/^[a-zA-Z0-9_/.-]+@[a-zA-Z0-9_-]+(?:\.[a-z]{2,6})$/))) {
+    merror1.innerText = "invalid mail";
+}
+else if (psd1 === "") {
+    perror0.innerText = "password should not be empty";
+}
+else if (!(psd1.match(/[a-z]+[A-Z]+[0-9]+/) || (/[A-Z]+[a-z]+[0-9]/))) {
+    perror0.innerText = "must used aleast one capital, small, digit";
+}
+else if (!psd1.match(/[#_@$^%]/)) {
+    perror0.innerText = "contain at least one special character";
+}
+else if (psd2 === "") {
+    perror1.innerText = "password should not be empty";
+}
+else if (!(psd2.match(/[a-z]+[A-Z]+[0-9]+/) || (/[A-Z]+[a-z]+[0-9]/))) {
+    perror1.innerText = "must used aleast one capital, small, digit";
+}
+else if (!psd2.match(/[#_@$^%]/)) {
+    perror1.innerText = "contain at least one special character";
+}
+else if (psd1 !== psd2) {
+        perror1.innerText = "passwords do not match";
+    }
+else {
+    form1.submit();
+}
+
+	}
+</script>
+</body>
+</html>
+

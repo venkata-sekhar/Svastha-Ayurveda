@@ -1,0 +1,36 @@
+.container h2
+{
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 30px;
+    font-variant: small-caps;
+    font-size: 30px;
+}
+body
+{
+    background:rgb(190, 187, 187);
+}
+a
+{
+	color: rgba(10, 10, 10, 0.885);
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 20px;
+}
+
+.navbar-brand
+{
+    font-size: 22px;
+    font-weight: 550px;
+    padding-left: 30px;
+}
+.navbar-nav li
+{   
+    justify-content: space-between;
+    font-size: 22px;
+    font-weight: 400;
+}
+.header
+{
+	background: #4AB03A;
+
+}

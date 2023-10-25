@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,700&family=Lobster&family=Noto+Sans+TC:wght@500&family=REM:ital,wght@0,100;1,300;1,500&family=Roboto+Condensed:ital,wght@1,300&family=Tilt+Prism&display=swap');
+.header
+{
+	background: #4AB03A;
+
+}
+/*body
+{
+	background-image: url(/home/venkat/Desktop/grass.jpg);
+
+}*/
+.ayur
+{
+	font-family: 'Lobster', cursive;
+	font-variant:small-caps;
+	font-size:30px ;
+	font-weight: 1000px;
+}
+a
+{
+	color: rgba(10, 10, 10, 0.885);
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 20px;
+}
+
+.navbar-brand
+{
+    font-size: 22px;
+    font-weight: 550px;
+    padding-left: 30px;
+}
+.navbar-nav li
+{   
+    justify-content: space-between;
+    font-size: 22px;
+    font-weight: 400;
+}
+h2
+{
+    font-weight: 700;
+    font-size:25px;
+	font-variant: small-caps;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	color: #050404;
+}
+p
+{
+	color: #050404;
+    font-size: 18px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h5
+{
+	font-size: 25px;
+	color: #050404;
+
+}
+.ordered-list
+{
+	font-size: 18px;
+	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+} 
+.about p
+{
+	display: flex;
+	justify-content: left;
+}
+.about img
+{
+	float: left;
+	justify-content:left;
+	width: 100%;
+	height: 350px;
+
+}
+.herbs p
+{
+	display: flex;
+	justify-content: left;
+	
+}
+.herbs img
+{
+	float:left;
+	justify-content:left;
+	width: 100%;
+	height: 250px;
+
+}
+.diseases p
+{
+	display: flex;
+	justify-content: left;
+	
+}
+.diseases img
+{
+	float:left;
+	justify-content:left;
+	width: 100%;
+	height: 300px;
+	margin-bottom: 20px;
+
+}
+/*
+    font-family: 'EB Garamond', serif;
+
+    font-family: 'REM', sans-serif;
+
+    font-family: 'Roboto Condensed', sans-serif;
+
+    font-family: 'Tilt Prism', cursive;
+	    font-family: 'Lobster', cursive;
+
+*/

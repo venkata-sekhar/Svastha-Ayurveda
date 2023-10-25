@@ -1,0 +1,57 @@
+ .main-header h4   
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 550px;
+    margin-top: 10px;
+}  
+
+h3
+{   
+    margin-top: 120px;
+    font-size: 25px; 
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h4
+{   
+    font-size: 30px;
+    font-weight: 600px; 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h5
+{
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.main-header img
+{
+    float: left;
+    margin-right: 20px;
+}
+.main-header p
+{
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-right: 20px;
+}
+.container 
+{
+    font-size: 18px;
+}
+.header1
+{
+	background: #4AB03A;
+
+}
+.navbar-brand
+{
+    font-size: 22px;
+    font-weight: 550px;
+    padding-left: 30px;
+}
+.navbar-nav li
+{   
+    justify-content: space-between;
+    font-size: 22px;
+    font-weight: 400;
+}
